@@ -1,0 +1,98 @@
+{
+  "title": "Scotow's Customs",
+  "rules": [
+    {
+      "description": "Map F4 to Show Desktop",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f4"
+          },
+          "to": [
+              {
+                  "modifiers": [
+                    "left_gui"
+                  ],
+                  "key_code": "mission_control"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Show iTunes on F5",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f5"
+          },
+          "to": [
+              {
+                  "shell_command": "open /Applications/iTunes.app"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Open a Terminal on Insert",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "insert"
+          },
+          "to": [
+              {
+                  "shell_command": "open /Applications/Utilities/Terminal.app -n"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Start taking a partial screenshot",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f13"
+          },
+          "to": [
+              {
+                "modifiers": [
+                  "left_gui",
+                  "left_control",
+                  "left_shift"
+                ],
+                "key_code": "4"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Take a full screenshot",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f14"
+          },
+          "to": [
+              {
+                "modifiers": [
+                  "left_gui",
+                  "left_control",
+                  "left_shift"
+                ],
+                "key_code": "3"
+              }
+          ]
+        }
+      ]
+    }
+  ]
+}
