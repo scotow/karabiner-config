@@ -2,7 +2,7 @@
   "title": "Scotow's Customs",
   "rules": [
     {
-      "description": "Map F4 to Show Desktop",
+      "description": "Show Desktop on F4",
       "manipulators": [
         {
           "type": "basic",
@@ -37,6 +37,22 @@
       ]
     },
     {
+      "description": "Pause or Resume current iTunes track on F7",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f7"
+          },
+          "to": [
+              {
+                  "shell_command": "osascript -e 'tell application \"iTunes\" to playpause'"
+              }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Open a Terminal on Insert",
       "manipulators": [
         {
@@ -53,7 +69,7 @@
       ]
     },
     {
-      "description": "Start taking a partial screenshot",
+      "description": "Start taking a partial screenshot on F13",
       "manipulators": [
         {
           "type": "basic",
@@ -74,7 +90,7 @@
       ]
     },
     {
-      "description": "Take a full screenshot",
+      "description": "Take a full screenshot on F14",
       "manipulators": [
         {
           "type": "basic",
