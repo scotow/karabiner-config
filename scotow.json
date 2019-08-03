@@ -109,6 +109,26 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Turn screen off on F15",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f15"
+          },
+          "to": [
+              {
+                "modifiers": [
+                  "left_control",
+                  "left_shift"
+                ],
+                "key_code": "eject"
+              }
+          ]
+        }
+      ]
     }
   ]
 }
