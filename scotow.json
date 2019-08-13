@@ -53,22 +53,6 @@
       ]
     },
     {
-      "description": "Open a Terminal on Insert",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-              "key_code": "insert"
-          },
-          "to": [
-              {
-                  "shell_command": "open /Applications/Utilities/Terminal.app -n"
-              }
-          ]
-        }
-      ]
-    },
-    {
       "description": "Start taking a partial screenshot on F13",
       "manipulators": [
         {
@@ -125,6 +109,22 @@
                   "left_shift"
                 ],
                 "key_code": "eject"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Open a Terminal on Insert",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "insert"
+          },
+          "to": [
+              {
+                  "shell_command": "osascript -l JavaScript -e 'const terminal = Application(\"Terminal\"); if (terminal.running()) terminal.doScript(\"\"); terminal.activate();'"
               }
           ]
         }
