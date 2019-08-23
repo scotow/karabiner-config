@@ -37,6 +37,22 @@
       ]
     },
     {
+      "description": "Play previous iTunes track on F6",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f6"
+          },
+          "to": [
+              {
+                  "shell_command": "osascript -e 'tell application \"iTunes\" to back track'"
+              }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Pause or Resume current iTunes track on F7",
       "manipulators": [
         {
@@ -47,6 +63,22 @@
           "to": [
               {
                   "shell_command": "osascript -e 'tell application \"iTunes\" to playpause'"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Play previous iTunes track on F8",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "f8"
+          },
+          "to": [
+              {
+                  "shell_command": "osascript -e 'tell application \"iTunes\" to play next track'"
               }
           ]
         }
