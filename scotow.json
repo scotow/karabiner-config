@@ -7,79 +7,79 @@
         {
           "type": "basic",
           "from": {
-              "key_code": "f4"
+            "key_code": "f4"
           },
           "to": [
-              {
-                  "modifiers": [
-                    "left_gui"
-                  ],
-                  "key_code": "mission_control"
-              }
+            {
+              "modifiers": [
+                "left_gui"
+              ],
+              "key_code": "mission_control"
+            }
           ]
         }
       ]
     },
     {
-      "description": "Show iTunes on F5",
+      "description": "Show Music on F5",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-              "key_code": "f5"
+            "key_code": "f5"
           },
           "to": [
-              {
-                  "shell_command": "open /Applications/iTunes.app"
-              }
+            {
+              "shell_command": "open /System/Applications/Music.app"
+            }
           ]
         }
       ]
     },
     {
-      "description": "Play previous iTunes track on F6",
+      "description": "Play previous Music track on F6",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-              "key_code": "f6"
+            "key_code": "f6"
           },
           "to": [
-              {
-                  "shell_command": "osascript -e 'tell application \"iTunes\" to back track'"
-              }
+            {
+              "shell_command": "osascript -e 'tell application \"Music\" to back track'"
+            }
           ]
         }
       ]
     },
     {
-      "description": "Pause or Resume current iTunes track on F7",
+      "description": "Pause or Resume current Music track on F7",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-              "key_code": "f7"
+            "key_code": "f7"
           },
           "to": [
-              {
-                  "shell_command": "osascript -e 'tell application \"iTunes\" to playpause'"
-              }
+            {
+              "shell_command": "osascript -e 'tell application \"Music\" to playpause'"
+            }
           ]
         }
       ]
     },
     {
-      "description": "Play previous iTunes track on F8",
+      "description": "Play previous Music track on F8",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-              "key_code": "f8"
+            "key_code": "f8"
           },
           "to": [
-              {
-                  "shell_command": "osascript -e 'tell application \"iTunes\" to play next track'"
-              }
+            {
+              "shell_command": "osascript -e 'tell application \"Music\" to play next track'"
+            }
           ]
         }
       ]
@@ -90,17 +90,17 @@
         {
           "type": "basic",
           "from": {
-              "key_code": "f13"
+            "key_code": "f13"
           },
           "to": [
-              {
-                "modifiers": [
-                  "left_gui",
-                  "left_control",
-                  "left_shift"
-                ],
-                "key_code": "4"
-              }
+            {
+              "modifiers": [
+                "left_gui",
+                "left_control",
+                "left_shift"
+              ],
+              "key_code": "4"
+            }
           ]
         }
       ]
@@ -111,17 +111,17 @@
         {
           "type": "basic",
           "from": {
-              "key_code": "f14"
+            "key_code": "f14"
           },
           "to": [
-              {
-                "modifiers": [
-                  "left_gui",
-                  "left_control",
-                  "left_shift"
-                ],
-                "key_code": "3"
-              }
+            {
+              "modifiers": [
+                "left_gui",
+                "left_control",
+                "left_shift"
+              ],
+              "key_code": "3"
+            }
           ]
         }
       ]
@@ -132,16 +132,16 @@
         {
           "type": "basic",
           "from": {
-              "key_code": "f15"
+            "key_code": "f15"
           },
           "to": [
-              {
-                "modifiers": [
-                  "left_control",
-                  "left_shift"
-                ],
-                "key_code": "eject"
-              }
+            {
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ],
+              "key_code": "eject"
+            }
           ]
         }
       ]
@@ -152,12 +152,12 @@
         {
           "type": "basic",
           "from": {
-              "key_code": "insert"
+            "key_code": "insert"
           },
           "to": [
-              {
-                  "shell_command": "osascript -l JavaScript -e 'const terminal = Application(\"Terminal\"); if (terminal.running()) terminal.doScript(\"\"); terminal.activate();'"
-              }
+            {
+              "shell_command": "osascript -l JavaScript -e 'const terminal = Application(\"Terminal\"); if (terminal.running()) terminal.doScript(\"\"); terminal.activate();'"
+            }
           ]
         }
       ]
