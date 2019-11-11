@@ -161,6 +161,27 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Open a SSH session in Terminal on Shift Insert",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "insert",
+            "modifiers": {
+              "mandatory": [
+                  "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -l JavaScript -e 'const terminal = Application(\"Terminal\"); if (terminal.running()) { terminal.doScript(\"ssh REMOTE\"); terminal.activate(); } else { terminal.activate(); terminal.doScript(\"ssh zibo\"); } '"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
