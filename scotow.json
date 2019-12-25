@@ -171,13 +171,45 @@
             "key_code": "insert",
             "modifiers": {
               "mandatory": [
-                  "shift"
+                "shift"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "osascript -l JavaScript -e 'const terminal = Application(\"Terminal\"); if (terminal.running()) { terminal.doScript(\"ssh REMOTE\"); terminal.activate(); } else { terminal.activate(); terminal.doScript(\"ssh zibo\"); } '"
+              "shell_command": "osascript -l JavaScript -e 'const terminal = Application(\"Terminal\"); if (terminal.running()) { terminal.doScript(\"ssh zibo\"); terminal.activate(); } else { terminal.activate(); terminal.doScript(\"ssh zibo\"); } '"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Send ESC-C on ALT-C",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            },
+            {
+              "key_code": "c"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$"
+              ]
             }
           ]
         }
