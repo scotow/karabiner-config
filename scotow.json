@@ -101,6 +101,27 @@
       ]
     },
     {
+      "description": "Switch to next audio output on Command-F9 (switchaudio-osx required)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f9",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/usr/local/bin/SwitchAudioSource -t output -n"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Start taking a partial screenshot on F13",
       "manipulators": [
         {
@@ -179,7 +200,7 @@
       ]
     },
     {
-      "description": "Open a SSH session in Terminal on Shift Insert",
+      "description": "Open a SSH session in Terminal on Shift-Insert",
       "manipulators": [
         {
           "type": "basic",
