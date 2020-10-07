@@ -280,6 +280,93 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Bind Cmd-E to I in Java apps (Minecraft)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "i"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^net\\.java\\.openjdk\\.cmd$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Bind Alt-E to O in Java apps (Minecraft)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "o"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^net\\.java\\.openjdk\\.cmd$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Bind Ctrl-E to P in Java apps (Minecraft)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "p"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^net\\.java\\.openjdk\\.cmd$"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
