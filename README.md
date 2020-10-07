@@ -15,3 +15,5 @@ My [karabiner](https://karabiner-elements.pqrs.org) config for complex modificat
 - Open a Terminal on Insert
 - Open a SSH session in Terminal on Shift-Insert
 - Send ESC-C on ALT-C (for fzf) 
+- Disable Cmd-Q in Java Apps (Minecraft)
+- Rebind some keybinds in Java Apps (Minecraft)
