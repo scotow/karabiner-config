@@ -94,7 +94,7 @@
           },
           "to": [
             {
-              "shell_command": "osascript -l JavaScript -e 'const app = Application.currentApplication(); app.includeStandardAdditions = true; app.displayNotification(app.getVolumeSettings().inputVolume ? \"Microphone Muted\" : \"Microphone Unmuted\", { withTitle: \"Microphone\" }); app.setVolume(null, { inputVolume: app.getVolumeSettings().inputVolume ? 0 : 100 })'"
+              "shell_command": "osascript -l JavaScript -e 'const app = Application.currentApplication(); app.includeStandardAdditions = true; app.displayNotification(app.getVolumeSettings().inputVolume < 5 ? \"Microphone Unmuted\" : \"Microphone Muted\", { withTitle: \"Microphone\" }); app.setVolume(null, { inputVolume: app.getVolumeSettings().inputVolume < 5 ? 100 : 0 })'"
             }
           ]
         }
