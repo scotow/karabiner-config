@@ -122,6 +122,48 @@
       ]
     },
     {
+      "description": "Decrease Music volume on Shift-F11",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f11",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Music\" to set sound volume to (get sound volume - 5)'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Increase Music volume on Shift-F12",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f12",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Music\" to set sound volume to (get sound volume + 5)'"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Start taking a partial screenshot on F13",
       "manipulators": [
         {
