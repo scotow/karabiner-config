@@ -409,6 +409,47 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Press right button 5 times in Java apps (Minecraft)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            },
+            {
+              "pointing_button": "button2"
+            },
+            {
+              "pointing_button": "button2"
+            },
+            {
+              "pointing_button": "button2"
+            },
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^net\\.java\\.openjdk\\.cmd$"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
