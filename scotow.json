@@ -122,7 +122,28 @@
       ]
     },
     {
-      "description": "Decrease Music volume on Shift-F11",
+      "description": "Set Music.app volume low Shift-F10",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f10",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Music\" to set sound volume to 2'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Decrease Music.app volume on Shift-F11",
       "manipulators": [
         {
           "type": "basic",
@@ -143,7 +164,7 @@
       ]
     },
     {
-      "description": "Increase Music volume on Shift-F12",
+      "description": "Increase Music.app volume on Shift-F12",
       "manipulators": [
         {
           "type": "basic",
@@ -263,7 +284,7 @@
       ]
     },
     {
-      "description": "Send ESC-C on ALT-C",
+      "description": "Send ESC-C on ALT-C (Terminal.app)",
       "manipulators": [
         {
           "type": "basic",
@@ -295,7 +316,7 @@
       ]
     },
     {
-      "description": "Disable Cmd-Q in Java apps (Minecraft)",
+      "description": "Disable Cmd-Q in Java apps (Minecraft / AZERTY keyboard)",
       "manipulators": [
         {
           "type": "basic",

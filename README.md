@@ -14,6 +14,7 @@ My [karabiner](https://karabiner-elements.pqrs.org) config for complex modificat
 - Turn screen off on F15
 - Open a Terminal on Insert
 - Open a SSH session in Terminal on Shift-Insert
-- Send ESC-C on ALT-C (for fzf) 
+- Send ESC-C on ALT-C in Terminal.app (for fzf)
+- Increase/decrease/set Music.app volume
 - Disable Cmd-Q in Java Apps (Minecraft)
 - Rebind some keybinds in Java Apps (Minecraft)
