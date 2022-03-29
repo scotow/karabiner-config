@@ -18,3 +18,4 @@ My [karabiner](https://karabiner-elements.pqrs.org) config for complex modificat
 - Increase/decrease/set Music.app volume
 - Disable Cmd-Q in Java Apps (Minecraft)
 - Rebind some keybinds in Java Apps (Minecraft)
+- And more...
