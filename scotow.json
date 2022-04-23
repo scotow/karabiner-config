@@ -358,7 +358,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^net\\.java\\.openjdk\\.cmd$"
+                "^net\\.java\\.openjdk\\.cmd$",
+                "^com\\.azul\\.zulu\\.java$"
               ]
             }
           ]
@@ -387,7 +388,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^net\\.java\\.openjdk\\.cmd$"
+                "^net\\.java\\.openjdk\\.cmd$",
+                "^com\\.azul\\.zulu\\.java$"
               ]
             }
           ]
@@ -416,7 +418,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^net\\.java\\.openjdk\\.cmd$"
+                "^net\\.java\\.openjdk\\.cmd$",
+                "^com\\.azul\\.zulu\\.java$"
               ]
             }
           ]
@@ -445,7 +448,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^net\\.java\\.openjdk\\.cmd$"
+                "^net\\.java\\.openjdk\\.cmd$",
+                "^com\\.azul\\.zulu\\.java$"
               ]
             }
           ]
@@ -486,7 +490,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^net\\.java\\.openjdk\\.cmd$"
+                "^net\\.java\\.openjdk\\.cmd$",
+                "^com\\.azul\\.zulu\\.java$"
               ]
             }
           ]
