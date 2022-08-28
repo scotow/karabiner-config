@@ -37,6 +37,48 @@
       ]
     },
     {
+      "description": "Toggle PiP for Twitch on Cmd-F5",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f5",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.twitch.tv\")' -e 'tell thisTab' -e 'do JavaScript \"document.pictureInPictureElement ? document.exitPictureInPicture() : document.querySelector(`video`).requestPictureInPicture()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Toggle PiP for YouTube on Alt-F5",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f5",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.youtube.com\")' -e 'tell thisTab' -e 'do JavaScript \"document.pictureInPictureElement ? document.exitPictureInPicture() : document.querySelector(`video`).requestPictureInPicture()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Play previous Music track on F6",
       "manipulators": [
         {
@@ -53,7 +95,7 @@
       ]
     },
     {
-      "description": "Pause or Resume current Music track on F7",
+      "description": "Pause or resume current Music track on F7",
       "manipulators": [
         {
           "type": "basic",
@@ -69,7 +111,7 @@
       ]
     },
     {
-      "description": "Mute or Unmute Twitch tabs on Shift-F7",
+      "description": "Pause or resume YouTube video on Alt-F7",
       "manipulators": [
         {
           "type": "basic",
@@ -77,13 +119,13 @@
             "key_code": "f7",
             "modifiers": {
               "mandatory": [
-                "shift"
+                "option"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.twitch.tv\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button[data-a-target=\\\"player-mute-unmute-button\\\"]`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.youtube.com\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`video`).paused ? document.querySelector(`video`).play() : document.querySelector(`video`).pause()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
             }
           ]
         }
@@ -158,6 +200,27 @@
           "to": [
             {
               "shell_command": "osascript -e 'tell application \"Music\" to set sound volume to 2'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Mute or Unmute Twitch tabs on Cmd-F10",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f10",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.twitch.tv\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button[data-a-target=\\\"player-mute-unmute-button\\\"]`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
             }
           ]
         }
