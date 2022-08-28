@@ -83,7 +83,7 @@
           },
           "to": [
             {
-              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.twitch.tv\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button[data-a-target=\\\"player-mute-unmute-button\\\"]`).click()\"' -e 'end tell' -e 'end repeat' -e 'end repeat' -e 'end tell'"
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.twitch.tv\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button[data-a-target=\\\"player-mute-unmute-button\\\"]`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
             }
           ]
         }
