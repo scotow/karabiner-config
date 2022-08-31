@@ -21,7 +21,7 @@
       ]
     },
     {
-      "description": "Show Music on F5",
+      "description": "Show Music.app on F5",
       "manipulators": [
         {
           "type": "basic",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "description": "Play previous Music track on F6",
+      "description": "Play previous Music.app track on F6",
       "manipulators": [
         {
           "type": "basic",
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "description": "Pause or resume current Music track on F7",
+      "description": "Pause or resume current Music.app track on F7",
       "manipulators": [
         {
           "type": "basic",
@@ -125,14 +125,14 @@
           },
           "to": [
             {
-              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.youtube.com\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`video`).paused ? document.querySelector(`video`).play() : document.querySelector(`video`).pause()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.youtube.com\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button.ytp-play-button`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
             }
           ]
         }
       ]
     },
     {
-      "description": "Play previous Music track on F8",
+      "description": "Play next Music.app track on F8",
       "manipulators": [
         {
           "type": "basic",
@@ -142,6 +142,27 @@
           "to": [
             {
               "shell_command": "osascript -e 'tell application \"Music\" to play next track'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Play next YouTube video on Alt-F8",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f8",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.youtube.com\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`a.ytp-next-button`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
             }
           ]
         }
@@ -206,7 +227,7 @@
       ]
     },
     {
-      "description": "Mute or Unmute Twitch tabs on Cmd-F10",
+      "description": "Mute or Unmute Twitch tab on Cmd-F10",
       "manipulators": [
         {
           "type": "basic",
@@ -221,6 +242,27 @@
           "to": [
             {
               "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.twitch.tv\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button[data-a-target=\\\"player-mute-unmute-button\\\"]`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Mute or Unmute Youtube tab on Alt-F10",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f10",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"Safari\"' -e 'repeat with thisWindow in every window' -e 'repeat with thisTab in (every tab of thisWindow whose URL contains \"https://www.youtube.com\")' -e 'tell thisTab' -e 'do JavaScript \"document.querySelector(`button.ytp-mute-button`).click()\"' -e 'end tell' -e 'return' -e 'end repeat' -e 'end repeat' -e 'end tell'"
             }
           ]
         }
